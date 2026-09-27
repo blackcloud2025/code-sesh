@@ -1,0 +1,179 @@
+<!html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Configuración básica del documento y recursos externos. -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rodaje — Panel de flota</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<!-- Contenedor principal: barra lateral y área de contenido. -->
+<div class="app">
+
+  <!-- Barra lateral: marca, navegación y estado del combustible. -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#04141A" stroke-width="2.4" stroke-linecap="round"><path d="M3 16V7a1 1 0 0 1 1-1h10v10H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6" fill="#04141A" stroke="none"/><circle cx="17.5" cy="18" r="1.6" fill="#04141A" stroke="none"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Rodaje</div>
+        <div class="brand-sub">Gestión de flota</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-label">Operación</div>
+      <a href="#" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg><span>Panel</span></a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V7a1 1 0 0 1 1-1h10v10H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>Flota</span></a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5.5-2V4L9 6m0 14l6-2m-6 2V6m6 12l5.5 2V6L15 4m0 16V4m0 2L9 6"/></svg><span>Rutas</span></a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Conductores</span></a>
+      <div class="nav-label">Soporte</div>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 1.4 0l1.6-1.6a1 1 0 0 1 1.4 0l1.2 1.2a1 1 0 0 1 0 1.4l-1.6 1.6a1 1 0 0 0 0 1.4l3.7 3.7a1 1 0 0 1 0 1.4l-2.1 2.1a1 1 0 0 1-1.4 0l-3.7-3.7a1 1 0 0 0-1.4 0l-1.6 1.6a1 1 0 0 1-1.4 0l-1.2-1.2a1 1 0 0 1 0-1.4l1.6-1.6a1 1 0 0 0 0-1.4z"/></svg><span>Mantenimiento</span></a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 3 3 5-7"/></svg><span>Reportes</span></a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg><span>Ajustes</span></a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="fuel-row"><span>Combustible usado hoy</span><span>64%</span></div>
+      <div class="meter"><i></i></div>
+    </div>
+  </aside>
+
+  <!-- Contenido principal del panel. -->
+  <main>
+    <div class="topbar">
+      <div>
+        <h1>Buenas tardes, customer</h1>
+        <p>18 camiones activos · 3 alertas requieren atención</p>
+      </div>
+      <div class="topbar-right">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="searchInput" type="text" placeholder="Buscar camión, placa o ruta…">
+        </div>
+        <div class="icon-btn"><span class="dot"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+        <div class="avatar">MR</div>
+      </div>
+    </div>
+
+    <section class="stats">
+      <div class="stat-card">
+        <div class="stat-top">
+          <div class="stat-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V7a1 1 0 0 1 1-1h10v10H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></div>
+          <span class="stat-trend up">+2 esta semana</span>
+        </div>
+        <p class="num">24</p>
+        <p class="label">Camiones en flota</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top">
+          <div class="stat-icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5.5-2V4L9 6m0 14l6-2m-6 2V6m6 12l5.5 2V6L15 4m0 16V4m0 2L9 6"/></svg></div>
+          <span class="stat-trend up">75%</span>
+        </div>
+        <p class="num">18</p>
+        <p class="label">En ruta ahora</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top">
+          <div class="stat-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 1.4 0l1.6-1.6a1 1 0 0 1 1.4 0l1.2 1.2a1 1 0 0 1 0 1.4l-1.6 1.6a1 1 0 0 0 0 1.4l3.7 3.7a1 1 0 0 1 0 1.4l-2.1 2.1a1 1 0 0 1-1.4 0l-3.7-3.7a1 1 0 0 0-1.4 0l-1.6 1.6a1 1 0 0 1-1.4 0l-1.2-1.2a1 1 0 0 1 0-1.4l1.6-1.6a1 1 0 0 0 0-1.4z"/></svg></div>
+          <span class="stat-trend down">2 nuevas</span>
+        </div>
+        <p class="num">3</p>
+        <p class="label">En mantenimiento</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-top">
+          <div class="stat-icon coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><circle cx="12" cy="12" r="9"/><path d="M12 16h.01"/></svg></div>
+          <span class="stat-trend down">Revisar</span>
+        </div>
+        <p class="num">3</p>
+        <p class="label">Alertas activas</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <!-- Panel de flota: filtros y lista generada por app.js. -->
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Flota en tiempo real</h2>
+            <div class="sub">Actualizado hace 2 minutos</div>
+          </div>
+          <div class="filters" id="filters">
+            <button class="active" data-filter="todos">Todos</button>
+            <button data-filter="ruta">En ruta</button>
+            <button data-filter="disp">Disponibles</button>
+            <button data-filter="mant">Mantenimiento</button>
+            <button data-filter="detenido">Detenidos</button>
+          </div>
+        </div>
+
+        <div class="fleet-head-row">
+          <span></span><span>Unidad</span><span>Ruta</span><span>Estado</span><span style="text-align:right">Llegada</span><span></span>
+        </div>
+
+        <div class="fleet-list" id="fleetList"></div>
+      </div>
+
+      <!-- Columna lateral: despacho, ruta activa y conductores. -->
+      <div class="side-col">
+        <div class="dispatch-card">
+          <h3>Despacho rápido</h3>
+          <p class="sub">Asigna una unidad disponible a una nueva carga</p>
+          <div class="field">
+            <label>Unidad</label>
+            <select>
+              <option>RD-104 · Disponible</option>
+              <option>RD-108 · Disponible</option>
+              <option>RD-115 · Disponible</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Destino</label>
+            <input type="text" placeholder="Ej. Bodega Norte, Guadalajara">
+          </div>
+          <button class="btn-grad" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#04141A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Asignar carga
+          </button>
+        </div>
+
+        <div class="route-card">
+          <div class="top-row">
+            <h3>RD-102 · en ruta</h3>
+            <span class="badge">Live</span>
+          </div>
+          <div class="route-map">
+            <svg viewBox="0 0 300 96" preserveAspectRatio="none">
+              <path d="M10 70 C 70 20, 140 90, 200 40 S 280 20, 290 26" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+              <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#2F6BFF"/></linearGradient></defs>
+              <circle cx="10" cy="70" r="4" fill="#22D3EE"/>
+              <circle cx="200" cy="40" r="5" fill="#fff"/>
+              <circle cx="290" cy="26" r="4" fill="#2F6BFF"/>
+            </svg>
+          </div>
+          <div class="route-stops">
+            <div><b>León, GTO</b>Origen · 07:40</div>
+            <div style="text-align:right"><b>CDMX Bodega</b>Llega · 14:20</div>
+          </div>
+        </div>
+
+        <div class="drivers-card">
+          <h3>Conductores de turno</h3>
+          <div id="driverList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Carga la lógica después de que existe todo el HTML que utiliza. -->
+<script src="scripts/app.js"></script>
+</body>
+</html>
